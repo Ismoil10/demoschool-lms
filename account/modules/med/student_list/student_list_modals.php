@@ -1571,7 +1571,7 @@ if (isset($_POST["coinSubmit"])) {
     }
     if ($get_coin_log == "empty" and $update["stat"] == "success") {
         $data = ['chat_id' => $chat_id["CHAT_ID"], 'parse_mode' => 'HTML', 'disable_web_page_preview' => false, 'text' => $text];
-        $send_message = file_get_contents("https://api.telegram.org/bot5917704072:AAHrzOHlfmMKrwFQgBHMZMbqxnKbmk9fj7c/sendMessage?" . http_build_query($data));
+        $send_message = file_get_contents("https://api.telegram.org/<token>/sendMessage?" . http_build_query($data));
         $insert_log = db::query("INSERT INTO `table_log` (`USER_ID`,`LOG_DATE`,`TABLE_NAME`,`ACTION`,`ITEM_ID`,`ACTIVE`,`COMMENT`) VALUES ('$user_id', '$now', 'student_list', '$action_type','$student_id',1,'$comment')");
     }
     header("Location: $student_id");
