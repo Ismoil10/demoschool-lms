@@ -142,7 +142,7 @@ foreach (db::arr("SELECT * FROM `message_log` WHERE `STATUS`=2") as $v) {
 try
 { 
 
-$token = "5917704072:AAHrzOHlfmMKrwFQgBHMZMbqxnKbmk9fj7c";
+$token = "<telegram bot token>";
 $api_url = "https://api.telegram.org/bot" . $token . "/deleteMessage?";
 
 $send_message = $api_url."chat_id=".$v['CHAT_ID']."&message_id=".$v['MESSAGE_ID'];
