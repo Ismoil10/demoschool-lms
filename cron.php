@@ -2,7 +2,7 @@
 class db{
 	static function conn()
 	{
-		$conn = new mysqli('localhost', 'root', 'evosoft050', 'demoschool');
+		$conn = new mysqli('localhost', '<username>', '<password>', '<database>');
 		$conn->set_charset('utf8mb4_bin');
 		if ($conn->connect_error) {
 			die('Connection faield:' . $conn->connect_error);
@@ -82,7 +82,7 @@ $rassilka = db::arr_s("SELECT * FROM `tg_rassilka` WHERE ID = '$v[RASSILKA_ID]'"
 
 //$get_photo = json_decode($rassilka['FILE_URL'], true);
 
-$token = "5917704072:AAHrzOHlfmMKrwFQgBHMZMbqxnKbmk9fj7c";
+$token = "<telegram bot token>";
 $api_url = "https://api.telegram.org/bot" . $token . "/sendPhoto?";
 $file_url = "https://api.telegram.org/bot" . $token . "/sendDocument?";
 $message_url = "https://api.telegram.org/bot" . $token . "/sendMessage?";
