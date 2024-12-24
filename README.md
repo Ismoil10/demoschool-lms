@@ -1,4 +1,4 @@
-# coddycamp-lms
+# demoschool-lms
 
 LMS System for CoddyCamp IT Academy
 This Learning Management System (LMS) was developed for CoddyCamp IT Academy, serving over 2,000 students. It is designed to manage courses, students, and communication efficiently.
